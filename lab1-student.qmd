@@ -3,9 +3,10 @@ title: "Lab 1: Introduction to Quarto"
 author: "Eden Schott"
 date: "01/12/25"
 format: html
-editor: source
-  markdown: 
-    wrap: 72
+editor: 
+  source:
+    markdown:
+      wrap: 72
 embed-resources: true
 execute:
   echo: true
@@ -46,7 +47,7 @@ summary(ToothGrowth)
 
 *The two supplement delivery methods include OJ (orange juice) and VC (ascorbic acid).*
 
-*`ToothGrowth` is a data frame with 60 **observations and*** 3 variables.
+*`ToothGrowth` is a data frame with **60 observations and 3 variables***.
 
 **Question 5** -- *Before* the code chunk, change the "Running the Provided Code" section header to a header that better describes the contents of this section (e.g., Tooth Growth Dataset).
 
@@ -58,10 +59,11 @@ summary(ToothGrowth)
 #| echo: true
 #| label: creating-a-plot
 #| layout-ncol: 2
-#| fig-align: "center"
+#| fig-align: center
 #| fig-cap: 
-#|   - "Plot 1"
-#|   - "Plot 2"
+#|   - "plot of tooth length by two supplement delivery methods"
+#|   - "plot of tooth length by three dosages uses"
+#| cap-align: center
 
 library(tidyverse)
 
@@ -91,5 +93,5 @@ Now, run this code chunk! You should see two side-by-side boxplots, one plot com
 ```{r}
 t.test(ToothGrowth$len)
 ```
-(@) I can conlude that there is a difference between the treatment mean tooth length for the OJ supplement delivery method and the treatment mean tooth length for the VC supplement delivery method based on the p-value of 2.2e-16 which is significanly smaller than the .05 benchmark for significance.
-(@) I am 95% confident that the long term true average difference between the OJ supplement delivery method and the treatment mean tooth length for the VC supplement delivery method lies between 16.83731 and 20.78936.
+(@) I can conlude that there is a difference between *the treatment mean tooth length for the OJ supplement delivery method and the treatment mean tooth length for the VC supplement delivery method* based on the p-value of 2.2e-16 which is significanly smaller than the .05 benchmark for significance.
+(@) I am 95% confident that the long term true difference of averages between *the OJ supplement delivery method* **and** *the treatment mean tooth length for the VC supplement delivery method* lies between 16.83731 and 20.78936.
