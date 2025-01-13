@@ -11,9 +11,15 @@ embed-resources: true
 execute:
   echo: true
   error: true
+toc: true
+number-sections: true
+smooth-scroll: true
+code-fold: show
+theme: 
+  light: journal
 ---
 
-# Part Two: Exploring Quarto Documents
+# Exploring Quarto Documents
 
 ## Specifying Global Execute Options
 
@@ -88,10 +94,11 @@ Now, run this code chunk! You should see two side-by-side boxplots, one plot com
 **Question 9** -- Specify a **figure caption** for the boxplots (using a code-chunk option).
 
 
-##One Sample t-test w/ Analysis 
+## One Sample t-test w/ Analysis 
 
 ```{r}
 t.test(ToothGrowth$len)
 ```
+### Conclusion/Analysis
 (@) I can conlude that there is a difference between *the treatment mean tooth length for the OJ supplement delivery method and the treatment mean tooth length for the VC supplement delivery method* based on the p-value of 2.2e-16 which is significanly smaller than the .05 benchmark for significance.
 (@) I am 95% confident that the long term true difference of averages between *the OJ supplement delivery method* **and** *the treatment mean tooth length for the VC supplement delivery method* lies between 16.83731 and 20.78936.
